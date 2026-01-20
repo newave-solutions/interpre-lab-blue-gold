@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import DataStream from './components/DataStream';
 import Features from './components/Features';
+import InterpreCoachDemo from './components/InterpreCoachDemo';
 import InterpreBot from './components/InterpreBot';
 import Metrics from './components/Metrics';
 import Footer from './components/Footer';
@@ -17,6 +18,8 @@ function App() {
         <Hero />
         <DataStream />
         <Features />
+        <DataStream />
+        <InterpreCoachDemo />
         <DataStream />
         <InterpreBot />
         <DataStream />

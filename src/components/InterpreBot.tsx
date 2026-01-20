@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { MessageSquare, Zap, Brain } from 'lucide-react';
+import theCrewImage from '../assets/the_crew.png';
 
 export default function InterpreBot() {
   return (
@@ -13,114 +14,51 @@ export default function InterpreBot() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative w-full max-w-md mx-auto">
+            <div className="relative w-full max-w-lg mx-auto">
               <motion.div
-                className="absolute inset-0 rounded-full blur-3xl opacity-30"
-                style={{ background: 'radial-gradient(circle, #2563EB 0%, transparent 70%)' }}
+                className="absolute inset-0 rounded-full blur-3xl"
+                style={{ background: 'radial-gradient(circle, #D4AF37 0%, transparent 70%)' }}
                 animate={{
                   scale: [1, 1.2, 1],
-                  opacity: [0.3, 0.5, 0.3],
+                  opacity: [0.2, 0.35, 0.2],
                 }}
                 transition={{
-                  duration: 3,
+                  duration: 4,
                   repeat: Infinity,
                   ease: 'easeInOut',
                 }}
               />
 
               <motion.div
-                className="relative z-10 w-64 h-64 mx-auto rounded-3xl backdrop-blur-xl overflow-hidden"
+                className="relative z-10 rounded-3xl backdrop-blur-xl overflow-hidden p-6"
                 style={{
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  border: '2px solid #D4AF37',
-                  boxShadow: '0 0 60px rgba(37, 99, 235, 0.4)',
+                  background: 'linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3))',
+                  border: '2px solid rgba(212, 175, 55, 0.6)',
+                  boxShadow: '0 0 80px rgba(212, 175, 55, 0.3), 0 0 120px rgba(37, 99, 235, 0.2)',
                 }}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <motion.div
-                    className="w-48 h-48 rounded-2xl flex items-center justify-center"
-                    style={{
-                      background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7))',
-                    }}
-                    animate={{
-                      rotate: [0, 5, -5, 0],
-                    }}
-                    transition={{
-                      duration: 4,
-                      repeat: Infinity,
-                      ease: 'easeInOut',
-                    }}
-                  >
-                    <div className="relative">
-                      <div className="w-24 h-32 rounded-2xl bg-white relative overflow-hidden">
-                        <motion.div
-                          className="absolute top-8 left-1/2 -translate-x-1/2 flex gap-4"
-                          animate={{
-                            scale: [1, 1.1, 1],
-                          }}
-                          transition={{
-                            duration: 2,
-                            repeat: Infinity,
-                            ease: 'easeInOut',
-                          }}
-                        >
-                          <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#2563EB' }} />
-                          <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#2563EB' }} />
-                        </motion.div>
-
-                        <motion.div
-                          className="absolute bottom-8 left-1/2 -translate-x-1/2 w-12 h-2 rounded-full"
-                          style={{ backgroundColor: '#D4AF37' }}
-                          animate={{
-                            scaleX: [1, 1.2, 1],
-                          }}
-                          transition={{
-                            duration: 1.5,
-                            repeat: Infinity,
-                            ease: 'easeInOut',
-                          }}
-                        />
-                      </div>
-
-                      <motion.div
-                        className="absolute -top-2 -right-2 w-6 h-6 rounded-full"
-                        style={{ backgroundColor: '#D4AF37' }}
-                        animate={{
-                          y: [0, -5, 0],
-                          rotate: [0, 10, 0],
-                        }}
-                        transition={{
-                          duration: 2,
-                          repeat: Infinity,
-                          ease: 'easeInOut',
-                        }}
-                      />
-                      <motion.div
-                        className="absolute -top-2 -left-2 w-6 h-6 rounded-full"
-                        style={{ backgroundColor: '#D4AF37' }}
-                        animate={{
-                          y: [0, -5, 0],
-                          rotate: [0, -10, 0],
-                        }}
-                        transition={{
-                          duration: 2,
-                          repeat: Infinity,
-                          ease: 'easeInOut',
-                          delay: 0.3,
-                        }}
-                      />
-                    </div>
-                  </motion.div>
-                </div>
+                <motion.img
+                  src={theCrewImage}
+                  alt="InterpreLab Robot Crew"
+                  className="w-full h-auto"
+                  animate={{
+                    y: [0, -10, 0],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                  }}
+                />
               </motion.div>
 
               <motion.div
-                className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full flex items-center justify-center"
+                className="absolute -bottom-4 -right-4 w-20 h-20 rounded-full flex items-center justify-center"
                 style={{
-                  background: 'rgba(37, 99, 235, 0.2)',
-                  border: '2px solid #2563EB',
+                  background: 'rgba(212, 175, 55, 0.2)',
+                  border: '2px solid #D4AF37',
                 }}
                 animate={{
                   scale: [1, 1.1, 1],
@@ -132,7 +70,7 @@ export default function InterpreBot() {
                   ease: 'linear',
                 }}
               >
-                <Zap className="w-10 h-10" style={{ color: '#D4AF37' }} />
+                <Zap className="w-8 h-8" style={{ color: '#D4AF37' }} />
               </motion.div>
             </div>
           </motion.div>
@@ -146,12 +84,12 @@ export default function InterpreBot() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full backdrop-blur-md"
               style={{
-                background: 'rgba(37, 99, 235, 0.1)',
-                border: '1px solid rgba(37, 99, 235, 0.3)',
+                background: 'rgba(212, 175, 55, 0.1)',
+                border: '1px solid rgba(212, 175, 55, 0.3)',
               }}
             >
-              <Brain className="w-4 h-4" style={{ color: '#2563EB' }} />
-              <span className="text-sm" style={{ color: '#2563EB' }}>
+              <Brain className="w-4 h-4" style={{ color: '#D4AF37' }} />
+              <span className="text-sm" style={{ color: '#D4AF37' }}>
                 AI Conversation Partner
               </span>
             </div>
@@ -168,14 +106,14 @@ export default function InterpreBot() {
             <div className="space-y-4">
               <div className="flex items-start gap-4 p-4 rounded-xl backdrop-blur-md"
                 style={{
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  background: 'rgba(0, 0, 0, 0.3)',
+                  border: '1px solid rgba(212, 175, 55, 0.2)',
                 }}
               >
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                  style={{ background: 'rgba(37, 99, 235, 0.2)' }}
+                  style={{ background: 'rgba(212, 175, 55, 0.2)' }}
                 >
-                  <MessageSquare className="w-5 h-5" style={{ color: '#2563EB' }} />
+                  <MessageSquare className="w-5 h-5" style={{ color: '#D4AF37' }} />
                 </div>
                 <div>
                   <h4 className="text-white font-semibold mb-1">Natural Conversations</h4>
@@ -187,14 +125,14 @@ export default function InterpreBot() {
 
               <div className="flex items-start gap-4 p-4 rounded-xl backdrop-blur-md"
                 style={{
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  background: 'rgba(0, 0, 0, 0.3)',
+                  border: '1px solid rgba(212, 175, 55, 0.2)',
                 }}
               >
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                  style={{ background: 'rgba(37, 99, 235, 0.2)' }}
+                  style={{ background: 'rgba(212, 175, 55, 0.2)' }}
                 >
-                  <Zap className="w-5 h-5" style={{ color: '#2563EB' }} />
+                  <Zap className="w-5 h-5" style={{ color: '#D4AF37' }} />
                 </div>
                 <div>
                   <h4 className="text-white font-semibold mb-1">Instant Feedback</h4>
@@ -206,14 +144,14 @@ export default function InterpreBot() {
 
               <div className="flex items-start gap-4 p-4 rounded-xl backdrop-blur-md"
                 style={{
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  background: 'rgba(0, 0, 0, 0.3)',
+                  border: '1px solid rgba(212, 175, 55, 0.2)',
                 }}
               >
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                  style={{ background: 'rgba(37, 99, 235, 0.2)' }}
+                  style={{ background: 'rgba(212, 175, 55, 0.2)' }}
                 >
-                  <Brain className="w-5 h-5" style={{ color: '#2563EB' }} />
+                  <Brain className="w-5 h-5" style={{ color: '#D4AF37' }} />
                 </div>
                 <div>
                   <h4 className="text-white font-semibold mb-1">Adaptive Learning</h4>

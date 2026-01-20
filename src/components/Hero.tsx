@@ -1,10 +1,32 @@
 import { motion } from 'framer-motion';
 import CardStack3D from './CardStack3D';
 import { Sparkles } from 'lucide-react';
+import theCrewImage from '../assets/the_crew.png';
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 px-6">
+      <motion.div
+        className="absolute right-0 top-32 w-1/2 h-auto opacity-15 pointer-events-none hidden lg:block"
+        initial={{ opacity: 0, x: 100, scale: 0.8 }}
+        animate={{ opacity: 0.15, x: 0, scale: 1 }}
+        transition={{ duration: 1.5, ease: 'easeOut' }}
+      >
+        <motion.img
+          src={theCrewImage}
+          alt="Robot Crew"
+          className="w-full h-auto"
+          animate={{
+            y: [0, -15, 0],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+        />
+      </motion.div>
+
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div

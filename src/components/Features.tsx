@@ -80,7 +80,7 @@ export default function Features() {
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.border = '1px solid #D4AF37';
-                  e.currentTarget.style.boxShadow = '0 0 40px rgba(37, 99, 235, 0.3)';
+                  e.currentTarget.style.boxShadow = '0 0 40px rgba(212, 175, 55, 0.3)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.border = '1px solid rgba(255, 255, 255, 0.1)';
@@ -91,11 +91,11 @@ export default function Features() {
                   <div
                     className="w-14 h-14 rounded-xl flex items-center justify-center"
                     style={{
-                      background: 'linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(212, 175, 55, 0.2))',
-                      border: '1px solid rgba(37, 99, 235, 0.3)',
+                      background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.1))',
+                      border: '1px solid rgba(212, 175, 55, 0.4)',
                     }}
                   >
-                    <Icon className="w-7 h-7" style={{ color: '#2563EB' }} />
+                    <Icon className="w-7 h-7" style={{ color: '#D4AF37' }} />
                   </div>
                   <span
                     className="px-3 py-1 rounded-full text-xs font-semibold"
